@@ -6,7 +6,7 @@
 /*   By: vdragomi <vdragomi@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 16:26:43 by vdragomi          #+#    #+#             */
-/*   Updated: 2021/08/12 15:08:03 by vdragomi         ###   ########.fr       */
+/*   Updated: 2021/08/17 15:59:03 by vdragomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,22 @@
 //--------> Total = [ P(1+r/n)^(nt) ] + [ PMT × (((1 + r/n)^(nt) - 1) / (r/n)) ]
 //TIME IS EXPRESSED IN YEARS!
 
-pub fn final_amount(principal: f64, rate: f64, time: f64) -> f64 {
-    let power = f64::powf(1.0 + rate / (100.0 * 12.0), time * 12.0);
-    println!("power = {}", power);
+// If the additional deposits are made at the END of the period (end of month, year, etc), here are the two formulae you will need:
+
+// Compound interest for principal:
+
+// P(1+r/n) ^ (nt)
+
+// Future value of a series:
+
+// PMT × {[(1 + r/n) ^ (nt) - 1] / (r/n)}
+
+pub fn final_amount(pmt: f64, principal: f64, mut rate: f64, time: f64) -> f64 {
+    rate = rate / 100.0;
+    let power = f64::powf(1.0 + rate / 12.0, time * 12.0);
     let a = principal * power;
-    a
+    let future_value_power = f64::powf(1.0 + (rate / 12.0), 12.0 * time);
+    let future_value = ((future_value_power - 1.0) / (rate / 12.0)) * pmt;
+    let total: f64 = a + future_value;
+    total
 }
