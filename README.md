@@ -1,4 +1,4 @@
-![myimage](<a href="https://ibb.co/qkk4hg8"><img src="https://i.ibb.co/hDDnrdN/Screenshot-from-2021-08-17-23-06-07.png" alt="Screenshot-from-2021-08-17-23-06-07" border="0"></a>)
+  ![myimage](https://av.sc.com/sg/content/images/sg-compound-interest-to-grow-your-retirment-savings-masthead.png)
 
 Compound Interest Calculator
 =
