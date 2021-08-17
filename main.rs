@@ -56,30 +56,6 @@ fn main() {
         println!("Please restart program and indicate a positive value, larger than 0, in years. Exiting program.");
     }
     input.zeroize();
-    // let mut principal = String::new();
-    // println!("Please indicate the principal:");
-    // io::stdin().read_line(&mut principal).unwrap();
-    // let principal = principal.trim();
-    // let principal = principal
-    //     .parse::<f64>()
-    //     .expect("Principal is not correctly indicated.");
-    // println!("=================================");
-    // let mut rate = String::new();
-    // println!("Please indicate the rate (yearly):");
-    // io::stdin().read_line(&mut rate).unwrap();
-    // let rate = rate.trim();
-    // let rate = rate.parse::<f64>().expect(
-    //     "Rate is not a correctly indicated value. Please indicate the correct rate (ex: 5.0)",
-    // );
-    // println!("=================================");
-    // let mut time = String::new();
-    // 	println!("Please indicate the time in years:");
-    // 	io::stdin().read_line(&mut time).unwrap();
-    // 	let time = time.trim();
-    // 	let time = time
-    //     	.parse::<f64>()
-    //     	.expect("Time is not a correctly indicated value. Please indicate the number of years.");
-    // println!("=================================\n");
     println!("Will you be making monthly deposits? If so, please indicate the sum. If not, please simply write 'no'.");
     io::stdin().read_line(&mut input).unwrap();
     input = input.trim().to_string();
