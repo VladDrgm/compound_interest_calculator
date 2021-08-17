@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// assert_eq!(true as i32, 1);
-// assert_eq!(false as i32, 0);
-
 use std::io;
 use std::process;
 use zeroize::Zeroize;
