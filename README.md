@@ -24,7 +24,7 @@ For our use, we shall have the following variables named as per below:
 Functionalities
 -
 These are the functionalities I wish to implement [^1]:
-1) Total investment balance given the rate, principal, monthly contributions and time   ***[X]***
+1) Total final investment balance given the rate, principal, monthly contributions and time   ***[X]***
 2) Rate required in order to reach a desired amount ***[ ]***
 3) Time in which one will reach the desired amount ***[ ]***
 4) Monthly regular payment required to reach the desired amount ***[ ]***
